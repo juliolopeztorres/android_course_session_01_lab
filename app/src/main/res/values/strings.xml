@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MyForm</string>
+    <string name="greeter">Hi There!</string>
+    <string name="btnNext">Next</string>
+    <string name="inputName">Enter your name</string>
+    <string name="greeting">Greeting</string>
+    <string name="farewell">Farewell</string>
+    <string name="ageHint">Your age: </string>
+    <string name="ageHintEmpty">Please, select your age</string>
+    <string name="warningNoNameEntered">You must provided a valid number (not empty)</string>
+    <string name="warningNoGreetingSelected">You must choose one option of Greeting</string>
+    <string name="warningLowAge">Minimal age is 16!</string>
+    <string name="warningHighAge">Maximal age is 60!</string>
+</resources>
