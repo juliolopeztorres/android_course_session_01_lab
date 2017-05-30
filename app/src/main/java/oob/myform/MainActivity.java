@@ -6,14 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button btnNext;
     private EditText editTextName;
-
-    public static final String KEY_NAME = "name";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
             String name = getStringFromEditText(getEditTextName());
             if (Utils.checkValidString(name)) {
                 Intent intentPassToSecondActivity = new Intent(MainActivity.this, SecondActivity.class);
-                intentPassToSecondActivity.putExtra(MainActivity.KEY_NAME, name);
+                intentPassToSecondActivity.putExtra(Utils.KEY_NAME, name);
 
                 startActivity(intentPassToSecondActivity);
             } else {
