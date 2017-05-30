@@ -12,4 +12,5 @@
     <string name="warningLowAge">Minimal age is 16!</string>
     <string name="warningHighAge">Maximal age is 60!</string>
     <string name="btnShare">Share!</string>
+    <string name="btnCheck">Check message out!</string>
 </resources>
