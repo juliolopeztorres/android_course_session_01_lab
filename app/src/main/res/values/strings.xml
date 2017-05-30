@@ -11,4 +11,5 @@
     <string name="warningNoGreetingSelected">You must choose one option of Greeting</string>
     <string name="warningLowAge">Minimal age is 16!</string>
     <string name="warningHighAge">Maximal age is 60!</string>
+    <string name="btnShare">Share!</string>
 </resources>
