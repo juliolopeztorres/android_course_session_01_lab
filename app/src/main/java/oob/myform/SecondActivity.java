@@ -1,5 +1,6 @@
 package oob.myform;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -7,8 +8,6 @@ import android.widget.Button;
 import android.widget.RadioGroup;
 import android.widget.SeekBar;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 public class SecondActivity extends AppCompatActivity {
 
@@ -34,7 +33,7 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     private void setVariables() {
-        this.setName(getIntent().getStringExtra(MainActivity.KEY_NAME));
+        this.setName(getIntent().getStringExtra(Utils.KEY_NAME));
         this.setSeekBarAge((SeekBar) findViewById(R.id.seekBarAge));
         this.setRadioGroupSelectTypeGreeting((RadioGroup) findViewById(R.id.radioGroupSelectTypeGreeting));
         this.setBtnNext((Button) findViewById(R.id.btnNext));
@@ -46,7 +45,13 @@ public class SecondActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (checkGreetingChoose() && checkValidAge()) {
-                    Utils.showToast(SecondActivity.this, "Show third activity");
+                    Intent intentPassToThirdActivity = new Intent(SecondActivity.this, ThirdActivity.class);
+
+                    intentPassToThirdActivity.putExtra(Utils.KEY_NAME, getName());
+                    intentPassToThirdActivity.putExtra(Utils.KEY_AGE, getAge());
+                    intentPassToThirdActivity.putExtra(Utils.KEY_GREETING_TYPE, getSelectTypeGreeting());
+
+                    startActivity(intentPassToThirdActivity);
                 }
             }
         });
@@ -159,5 +164,13 @@ public class SecondActivity extends AppCompatActivity {
 
     public void setAgeSelected(TextView ageSelected) {
         this.ageSelected = ageSelected;
+    }
+
+    public int getSelectTypeGreeting() {
+        if (this.getRadioGroupSelectTypeGreeting().getCheckedRadioButtonId() == R.id.radioButtonGreeting) {
+            return Utils.GREETING;
+        }
+
+        return Utils.FAREWELL;
     }
 }
