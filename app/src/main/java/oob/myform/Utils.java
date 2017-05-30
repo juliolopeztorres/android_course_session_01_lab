@@ -2,6 +2,8 @@ package oob.myform;
 
 
 import android.content.Context;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 class Utils {
@@ -27,5 +29,13 @@ class Utils {
      */
     static boolean checkValidString(String string) {
         return (string != null && !string.isEmpty());
+    }
+
+    static void hideBtn(Button button) {
+        button.setVisibility(View.INVISIBLE);
+    }
+
+    static void showBtn(Button button) {
+        button.setVisibility(View.VISIBLE);
     }
 }
