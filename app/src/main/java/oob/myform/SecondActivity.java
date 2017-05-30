@@ -28,6 +28,7 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     private void init() {
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         this.setVariables();
         this.setListeners();
     }
