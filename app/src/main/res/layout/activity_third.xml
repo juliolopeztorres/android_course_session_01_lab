@@ -6,6 +6,23 @@
     android:layout_height="match_parent"
     tools:context="oob.myform.ThirdActivity">
 
+    <RelativeLayout
+        android:id="@+id/relativeLayoutMidBtn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_above="@+id/btnShare"
+        >
+        <Button
+            android:id="@+id/btnCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnCheck"
+            android:background="@color/colorPrimaryLight"
+            android:textColor="@color/colorAccent"
+            />
+    </RelativeLayout>
+
     <Button
         android:id="@+id/btnShare"
         android:visibility="invisible"
@@ -20,22 +37,5 @@
         android:background="@color/colorAccent"
         android:textColor="@color/colorDivider"
         />
-
-    <RelativeLayout
-        android:id="@+id/relativeLayoutMidBtn"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:layout_above="@id/btnShare"
-        >
-        <Button
-            android:id="@+id/btnCheck"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/btnCheck"
-            android:background="@color/colorPrimaryLight"
-            android:textColor="@color/colorAccent"
-            />
-    </RelativeLayout>
 
 </RelativeLayout>
