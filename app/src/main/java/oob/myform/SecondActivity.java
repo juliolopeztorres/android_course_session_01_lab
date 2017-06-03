@@ -106,15 +106,23 @@ public class SecondActivity extends AppCompatActivity {
         this.getBtnNext().setVisibility(View.INVISIBLE);
     }
 
-    private void showBtnNext() {
-        this.getBtnNext().setVisibility(View.VISIBLE);
-    }
-
     /**
      * @param age int
      */
     private void updateAgeText(int age) {
         this.getAgeSelected().setText(String.valueOf(age));
+    }
+
+    public int getSelectTypeGreeting() {
+        if (this.getRadioGroupSelectTypeGreeting().getCheckedRadioButtonId() == R.id.radioButtonGreeting) {
+            return Utils.GREETING;
+        }
+
+        return Utils.FAREWELL;
+    }
+
+    private void showBtnNext() {
+        this.getBtnNext().setVisibility(View.VISIBLE);
     }
 
     // ------------------ Getter & Setters ------------------
@@ -165,13 +173,5 @@ public class SecondActivity extends AppCompatActivity {
 
     public void setAgeSelected(TextView ageSelected) {
         this.ageSelected = ageSelected;
-    }
-
-    public int getSelectTypeGreeting() {
-        if (this.getRadioGroupSelectTypeGreeting().getCheckedRadioButtonId() == R.id.radioButtonGreeting) {
-            return Utils.GREETING;
-        }
-
-        return Utils.FAREWELL;
     }
 }
