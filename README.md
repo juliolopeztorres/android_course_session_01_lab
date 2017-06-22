@@ -1,7 +1,7 @@
 My Form
 ==============
 
-First task of Android's course from Udemy
+First task of Android's course from Udemy website
 
 The goal here is to get a 3-page application, sharing information
 between every *activity* (explicit and implicit **Intent** objetcs)
@@ -19,3 +19,6 @@ Enjoy!
 
 [1]<a href="https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882"> Clean Code at Amazon </a>
     <a href="https://en.wikipedia.org/wiki/Robert_Cecil_Martin">Author: Robert Cecil Martin</a><br/>
+[2]<a href="https://www.udemy.com/programacion-de-android-desde-cero/"> 
+    Udemy's android course 
+    </a>
